@@ -106,7 +106,7 @@ $(document).ready(function () {
     //Puts all of the checked topping items into an array
     $("input:checkbox[name=toppings]:checked").each(function(){
       var toppingSelected = $(this).val();
-      pizzaOrder.toppings.push(toppingSelected);
+      pizzaOrder.toppings.push(" " +toppingSelected);
     });
 
     //Shows the price output
