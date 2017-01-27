@@ -50,8 +50,8 @@ h1, h2 {
 }
 
 .small-image {
-  height: 20%;
-  width: 20%;
+  height: 30%;
+  width: 30%;
 }
 
 .medium-image {
@@ -60,13 +60,14 @@ h1, h2 {
 }
 
 .large-image {
-  height: 60%;
-  width: 60%;
+  height: 50%;
+  width: 50%;
 }
 
-/*.size-images img {
-
-}*/
+#selected-size {
+  font-weight: bold;
+  color:red;
+}
 
 .show-picture {
   display: none;

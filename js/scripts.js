@@ -55,10 +55,13 @@ $(document).ready(function () {
     $("#pizza").removeClass()
     if (sizeVal === "small") {
       $("#pizza").css('display','block').addClass("small-image")
+      $("#selected-size").text("Small");
     } else if (sizeVal === "medium") {
       $("#pizza").css('display','block').addClass("medium-image")
+      $("#selected-size").text("Medium");
     } else if (sizeVal === "large") {
       $("#pizza").css('display','block').addClass("large-image")
+      $("#selected-size").text("Large");
     }
   });
 
@@ -109,6 +112,8 @@ $(document).ready(function () {
     $(".total-price").removeClass("hidden")
 
     $("#total").text(pizzaOrder.totalPrice())
+    $("#toppings-list").text(pizzaOrder.toppings)
+    $("#size-list").text(pizzaOrder.size)
 
     // Calls the form reset function
     pizzaOrder.resetForm();
