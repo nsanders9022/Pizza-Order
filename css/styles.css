@@ -1,3 +1,25 @@
+body {
+  background-color: red;
+}
+
+.banner {
+  background-image: url(http://betheme.muffingroupsc.netdna-cdn.com/be/pizza/wp-content/uploads/2014/09/home_pizza_slider_1.png);
+  background-repeat: no-repeat;
+  background-position:55% -20%;
+  height: 400px;
+  width: auto;
+  background-color: green;
+  margin-top: -20px;
+}
+
+.container {
+  background-color: white;
+}
+
+form {
+  padding: 20px 30px;
+}
+
 .total-price {
   margin-top: 20px;
 }
@@ -8,6 +30,11 @@
 
 h1 {
   text-align: center;
+  font-weight: bold;
+  font-size: 80px;
+  color: green;
+  text-shadow: 5px 5px red;
+  padding-top: 70px;
 }
 
 .topping-images img {
