@@ -49,6 +49,10 @@ h1, h2 {
   width: 30%
 }
 
+img#pizza {
+  margin: 0 auto;
+}
+
 .small-image {
   height: 30%;
   width: 30%;
@@ -67,6 +71,7 @@ h1, h2 {
 #selected-size {
   font-weight: bold;
   color:red;
+  text-align: center;
 }
 
 .show-picture {
