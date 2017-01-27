@@ -10,44 +10,70 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h2>Order your Pizza!</h2>
+        <h1>Mama Murphy's</h1>
       </div>
       <form id="pizza-order">
-        <div class="form-group">
-          <h3>Select your toppings:</h3>
-          <input type="checkbox" name="toppings" value="olives">Olives.<br>
-          <input type="checkbox" name="toppings" value="sausage">Sausage.<br>
-          <input type="checkbox" name="toppings" value="artichoke">Artichoke.<br>
-          <input type="checkbox" name="toppings" value="spinach">Spinach.<br>
-          <input type="checkbox" name="toppings" value="peppers">Peppers.<br>
-          <input type="checkbox" name="toppings" value="cheese">Extra cheese.<br>
-          <input type="checkbox" name="toppings" value="pepperoni">Pepperoni.<br>
+        <h2>Customize your pizza below</h2>
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Select your toppings:</h3>
+            <div class="form-group">
+              <input type="checkbox" name="toppings" value="cheese">Extra cheese.<br>
+              <input type="checkbox" name="toppings" value="pepperoni">Pepperoni.<br>
+              <input type="checkbox" name="toppings" value="olives">Olives.<br>
+              <input type="checkbox" name="toppings" value="sausage">Sausage.<br>
+              <input type="checkbox" name="toppings" value="broccoli">Broccoli.<br>
+              <input type="checkbox" name="toppings" value="spinach">Spinach.<br>
+              <input type="checkbox" name="toppings" value="peppers">Peppers.<br>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="topping-images">
+              <img src="img/broccoli.jpg" alt="broccoli" class="hidden topping-picture" id="broccoli">
+              <img src="img/cheese.png" alt="cheese" class="hidden topping-picture" id="cheese">
+              <img src="img/olives.jpg" alt="olives" class="hidden topping-picture" id="olives">
+              <img src="img/pepperoni.jpg" alt="pepperoni" class="hidden topping-picture" id="pepperoni">
+              <img src="img/peppers.jpg" alt="peppers" class="hidden topping-picture" id="peppers">
+              <img src="img/sausage.jpg" alt="sausage" class="hidden topping-picture" id="sausage">
+              <img src="img/spinach.jpg" alt="spinach" class="hidden topping-picture" id="spinach">
+            </div>
+          </div>
         </div>
 
-        <h3>Select your size:</h3>
-        <div class="size">
-          <label>
-            <input type="radio" name="size" value="small">
-            Small
-          </label>
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Select your size:</h3>
+            <div class="size">
+              <label>
+                <input type="radio" name="size" value="small">
+                Small
+              </label>
+            </div>
+            <div class="size">
+              <label>
+                <input type="radio" name="size" value="medium">
+                Medium
+              </label>
+            </div>
+            <div class="size">
+              <label>
+                <input type="radio" name="size" value="large">
+                Large
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="size-images">
+              <img src="img/small.jpg" alt="small" class="size-picture" id="small">
+              <img src="img/medium.jpg" alt="medium" class="size-picture" id="medium">
+              <img src="img/large.jpg" alt="large" class="size-picture" id="large">
+            </div>
+          </div>
         </div>
-        <div class="size">
-          <label>
-            <input type="radio" name="size" value="medium">
-            Medium
-          </label>
-        </div>
-        <div class="size">
-          <label>
-            <input type="radio" name="size" value="large">
-            Large
-          </label>
-        </div>
-
        <button type="submit">Order Pizza!</button>
       </form>
 
-      <div class="total-price">
+      <div class="total-price hidden well">
         <p>Your total is: $<span id="total"></span>.00</p>
       </div>
 

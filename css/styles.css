@@ -1,0 +1,20 @@
+.total-price {
+  margin-top: 20px;
+}
+
+.total-price p {
+  font-size: 26px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.topping-images img {
+  height: 30;
+  width: 30%
+}
+
+.show-picture {
+  display: none;
+}
