@@ -33,19 +33,20 @@ Pizza.prototype.resetForm = function() {
 }
 
 $(document).ready(function () {
-  $("#small").css('display', 'none');
-  $("#medium").css('display', 'none');
-  $("#large").css('display', 'none');
+
+  $("#pizza").css('display', 'none');
 
   $("input:radio[name=size]").change(function() {
+
     var sizeVal = $("input:radio[name=size]:checked").val();
+    $("#pizza").removeClass()
 
     if (sizeVal === "small") {
-      $("#small").css('display', 'block');
+      $("#pizza").css('display','block').addClass("small-image")
     } else if (sizeVal === "medium") {
-      $("#medium").css('display', 'block');
+      $("#pizza").css('display','block').addClass("medium-image")
     } else if (sizeVal === "large") {
-      $("#large").css('display', 'block');
+      $("#pizza").css('display','block').addClass("large-image")
     }
   });
 
