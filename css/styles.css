@@ -31,12 +31,13 @@ form {
 h1 {
   font-weight: bold;
   font-size: 90px;
-  color: #eada27;
+  color:white;
+  /*color: #eada27;*/
   text-shadow: 5px 5px red;
-  padding-top: 75px;
+  padding-top: 80px;
   font-family: 'Great Vibes', cursive;
   letter-spacing: 5px;
-  line-height: 0.2;
+  line-height: 0.1em;
 }
 
 h1, h2 {

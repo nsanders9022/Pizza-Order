@@ -1,3 +1,4 @@
+//BACKEND LOGIC
 function Pizza(toppings, size) {
   this.toppings = [];
   this.size = size;
@@ -44,7 +45,7 @@ Pizza.prototype.resetForm = function() {
 }
 
 
-
+//USER LOGIC
 $(document).ready(function () {
 
  //Displays a pizza image with a different class depending on the size chosen
@@ -61,61 +62,31 @@ $(document).ready(function () {
     }
   });
 
-  //Displays the topping that are selected
-  // $("input:checkbox[name=toppings]").change(function() {
-  //   var toppingVal =$("input:checkbox[name=toppings]:checked").val();
-  //
-  //   if (toppingVal === "broccoli") {
-  //     $("#broccoli").removeClass("hidden")
-  //   } else if (toppingVal === "cheese") {
-  //     $("#cheese").removeClass("hidden")
-  //   } else if (toppingVal === "olives") {
-  //     $("#olives").removeClass("hidden")
-  //   } else if (toppingVal === "pepperoni") {
-  //     $("#pepperoni").removeClass("hidden")
-  //   } else if (toppingVal === "peppers") {
-  //     $("#peppers").removeClass("hidden")
-  //   } else if (toppingVal === "sausage") {
-  //     $("#sausage").removeClass("hidden")
-  //   } else if (toppingVal === "spinach") {
-  //     $("#spinach").removeClass("hidden")
-  //   }
-  // })
+  //displays the corresponding image when a checkbox item is selected
+  $("#broccoli").on("click", function() {
+    $("#broccoli-image").toggleClass("hidden")
+  })
+  $("#cheese").on("click", function() {
+    $("#cheese-image").toggleClass("hidden")
+  })
+  $("#olives").on("click", function() {
+    $("#olives-image").toggleClass("hidden")
+  })
+  $("#pepperoni").on("click", function() {
+    $("#pepperoni-image").toggleClass("hidden")
+  })
+  $("#peppers").on("click", function() {
+    $("#peppers-image").toggleClass("hidden")
+  })
+  $("#sausage").on("click", function() {
+    $("#sausage-image").toggleClass("hidden")
+  })
+  $("#spinach").on("click", function() {
+    $("#spinach-image").toggleClass("hidden")
+  })
 
 
-  //Displays the topping that are selected
-  // $("input:checkbox[name=toppings]").change(function() {
-  //   var toppingVal =$("input:checkbox[name=toppings]:checked").val();
-  //
-  //   if (toppingVal === "broccoli") {
-  //     $(".topping-images").append("<img src='img/broccoli.jpg'/>");
-  //     toppingVal = "";
-  //   } else if (toppingVal === "cheese") {
-  //     $(".topping-images").append("<img src='img/cheese.png'/>");
-  //     toppingVal = "";
-  //   } else if (toppingVal === "olives") {
-  //     $(".topping-images").append("<img src='img/olives.jpg'>");
-  //     toppingVal = "";
-  //   } else if (toppingVal === "pepperoni") {
-  //     $(".topping-images").append("<img src='img/pepperoni.jpg'>");
-  //     toppingVal = "";
-  //   } else if (toppingVal === "peppers") {
-  //     $(".topping-images").append("<img src='img/peppers.jpg'>");
-  //     toppingVal = "";
-  //   } else if (toppingVal === "sausage") {
-  //     $(".topping-images").append("<img src='img/sausage.jpg'>");
-  //     toppingVal = "";
-  //   } else if (toppingVal === "spinach") {
-  //     $(".topping-images").append("<img src='img/spinach.jpg'>");
-  //     toppingVal = "";
-  //   }
-  // })
-
-
-
-
-
-
+  //Code for when form is submitted
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
 
