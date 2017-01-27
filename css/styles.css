@@ -30,10 +30,13 @@ form {
 
 h1 {
   font-weight: bold;
-  font-size: 80px;
-  color: green;
+  font-size: 90px;
+  color: #eada27;
   text-shadow: 5px 5px red;
   padding-top: 70px;
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 5px;
+
 }
 
 h1, h2 {
