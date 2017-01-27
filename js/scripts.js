@@ -2,6 +2,7 @@
 function Pizza(toppings, size) {
   this.toppings = [];
   this.size = size;
+  this.pizzas = [];
 }
 
 //Adds the additional cost of $1 per topping
@@ -88,6 +89,68 @@ $(document).ready(function () {
   $("#spinach").on("click", function() {
     $("#spinach-image").toggleClass("hidden")
   })
+
+  $("#another").click(function() {
+    $(".pizza-selection").append('<div class="row">' +
+      '<div class="col-sm-4">' +
+        '<h3>Select your toppings:</h3>' +
+        '<div class="form-group">' +
+          '<input type="checkbox" name="toppings" value="cheese" id="cheese"><strong>Extra cheese</strong><br>' +
+          '<input type="checkbox" name="toppings"  value="pepperoni" id="pepperoni"><strong>Pepperoni</strong><br>' +
+          '<input type="checkbox" name="toppings" value="olives" id="olives"><strong>Olives</strong><br>' +
+          '<input type="checkbox" name="toppings" value="sausage" id="sausage"><strong>Sausage</strong><br>' +
+          '<input type="checkbox" name="toppings" value="broccoli" id="broccoli"><strong>Broccoli</strong><br>' +
+          '<input type="checkbox" name="toppings" value="spinach" id="spinach"><strong>Spinach</strong><br>' +
+          '<input type="checkbox" name="toppings" value="peppers" id="peppers"><strong>Peppers</strong><br>' +
+        '</div>' +
+      '</div>' +
+      '<div class="col-sm-8">'+
+        '<div class="topping-images">'+
+          '<img src="img/cheese.png" alt="cheese" class="hidden topping-picture" id="cheese-image">'+
+          '<img src="img/pepperoni.jpg" alt="pepperoni" class="hidden topping-picture" id="pepperoni-image">'+
+          '<img src="img/olives.jpg" alt="olives" class="hidden topping-picture" id="olives-image">'+
+          '<img src="img/sausage.jpg" alt="sausage" class="hidden topping-picture" id="sausage-image">'+
+          '<img src="img/broccoli.jpg" alt="broccoli" class="hidden topping-picture" id="broccoli-image">'+
+          '<img src="img/spinach.jpg" alt="spinach" class="hidden topping-picture" id="spinach-image">'+
+          '<img src="img/peppers.jpg" alt="peppers" class="hidden topping-picture" id="peppers-image">'+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+
+  '<div class="row">' +
+    '<div class="col-sm-4">' +
+      '<h3>Select your size:</h3>' +
+      '<div class="size">' +
+        '<label>' +
+          '<input type="radio" name="size" value="small">' +
+          'Small' +
+        '</label>' +
+      '</div>' +
+      '<div class="size">' +
+        '<label>' +
+          '<input type="radio" name="size" value="medium">' +
+          'Medium' +
+        '</label>' +
+      '</div>' +
+      '<div class="size">' +
+        '<label>' +
+          '<input type="radio" name="size" value="large">' +
+          'Large' +
+        '</label>' +
+      '</div>' +
+    '</div>' +
+    '<div class="col-sm-8">' +
+      '<div class="size-images">' +
+        '<img src="img/cheese-pizza.png" alt="pizza" id="pizza">' +
+        '<p id="selected-size"><p>' +
+        '</div>' +
+      '</div>' +
+    '</div>')
+
+  })
+
+
+
 
 
   //Code for when form is submitted
