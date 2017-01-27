@@ -42,6 +42,7 @@ Pizza.prototype.totalPrice = function() {
 Pizza.prototype.resetForm = function() {
   $('input[name=size]').prop('checked',false);
   $('input[name=toppings]').prop('checked',false);
+
 }
 
 
@@ -49,7 +50,7 @@ Pizza.prototype.resetForm = function() {
 $(document).ready(function () {
 
  //Displays a pizza image with a different class depending on the size chosen
-  $("#pizza").css('display', 'none');
+  $("#pizza").addClass("hidden")
   $("input:radio[name=size]").change(function() {
     var sizeVal = $("input:radio[name=size]:checked").val();
     $("#pizza").removeClass()
@@ -110,12 +111,14 @@ $(document).ready(function () {
 
     //Shows the price output
     $(".total-price").removeClass("hidden")
-
     $("#total").text(pizzaOrder.totalPrice())
     $("#toppings-list").text(pizzaOrder.toppings)
     $("#size-list").text(pizzaOrder.size)
 
-    // Calls the form reset function
+    // Calls the form reset function and clears all of the images
     pizzaOrder.resetForm();
+    $(".topping-picture").addClass("hidden")
+    $("#pizza").addClass("hidden")
+    $("#selected-size").text("");
   })
 })
