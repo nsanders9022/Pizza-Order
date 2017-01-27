@@ -1,13 +1,14 @@
 function Pizza(toppings, size) {
-  this.toppings = toppings;
+  this.toppings = [];
   this.size = size;
 }
 
 Pizza.prototype.toppingsPrice = function () {
   var price = 10;
-  // this.toppings.forEach(topping) {
-  //
-  // }
+  for (var i = 0; i < this.toppings.length; i++) {
+    price += 1;    
+  }
+
   return price;
 }
 
@@ -21,12 +22,13 @@ $(document).ready(function () {
     var pizzaOrder = new Pizza(toppingsPriceAmount, "small")
 
     var toppingsPriceAmount = pizzaOrder.toppingsPrice()
-    
-    // $("input:checkbox[name=toppings]:checked").each(function(){
-    //   var toppingSelected = $(this).val();
-    //   this.toppings.push(toppingsSelected);
-    //
-    // });
+
+    $("input:checkbox[name=toppings]:checked").each(function(){
+      var toppingSelected = $(this).val();
+      pizzaOrder.toppings.push(toppingSelected);
+
+    });
+    console.log(pizzaOrder.toppings);
 
     $("#total").text(pizzaOrder.toppingsPrice())
   })

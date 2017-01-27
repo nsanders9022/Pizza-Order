@@ -32,7 +32,7 @@ _The program will add $2 for a medium sized pizza._
 
 _The program will add $4 for a large sized pizza._
 
-* Example Input: Pepperoni, cheese, medium
+* Example Input: Pepperoni, cheese, large
 * Example Output: $16
 
 ## Setup/Installation Requirements
