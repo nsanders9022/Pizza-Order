@@ -33,10 +33,10 @@ h1 {
   font-size: 90px;
   color: #eada27;
   text-shadow: 5px 5px red;
-  padding-top: 70px;
+  padding-top: 75px;
   font-family: 'Great Vibes', cursive;
   letter-spacing: 5px;
-
+  line-height: 0.2;
 }
 
 h1, h2 {

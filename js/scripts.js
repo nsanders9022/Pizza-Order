@@ -15,18 +15,23 @@ Pizza.prototype.toppingsPrice = function() {
 //Adds additional cost for medium and large pizzas
 Pizza.prototype.sizePrice = function(size) {
   var priceForSize = 0;
-    if (this.size === "medium") {
-      priceForSize += 2;
-    } else if (this.size === "large") {
-      priceForSize += 4;
-    }
+  if (this.size === "medium") {
+    priceForSize += 2;
+  } else if (this.size === "large") {
+    priceForSize += 4;
+  }
   return priceForSize;
 }
 
 //Combines the price of the toppings and size with the base pizza price
 Pizza.prototype.totalPrice = function() {
-  var price = 10 + this.toppingsPrice() + this.sizePrice();
-  return price;
+  if (this.sizePrice()) {
+    var price = 10 + this.toppingsPrice() + this.sizePrice() + ".00";
+    return price;
+  }
+  else {
+    return alert("Please select a size")
+  }
 }
 
 //Resets the form values to unchecked when the form is submitted
@@ -95,9 +100,6 @@ $(document).ready(function () {
       $(".topping-images").append("<img src='img/spinach.jpg'>");
     }
   })
-
-
-
 
 
 
