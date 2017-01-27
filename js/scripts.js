@@ -16,9 +16,11 @@ Pizza.prototype.toppingsPrice = function() {
 Pizza.prototype.sizePrice = function(size) {
   var priceForSize = 0;
   if (this.size === "medium") {
-    priceForSize += 2;
+    priceForSize += 3;
   } else if (this.size === "large") {
-    priceForSize += 4;
+    priceForSize += 5;
+  } else {
+    priceForSize += 1;
   }
   return priceForSize;
 }
@@ -26,7 +28,7 @@ Pizza.prototype.sizePrice = function(size) {
 //Combines the price of the toppings and size with the base pizza price
 Pizza.prototype.totalPrice = function() {
   if (this.sizePrice()) {
-    var price = 10 + this.toppingsPrice() + this.sizePrice() + ".00";
+    var price = 9 + this.toppingsPrice() + this.sizePrice() + ".00";
     return price;
   }
   else {
@@ -81,25 +83,33 @@ $(document).ready(function () {
 
 
   //Displays the topping that are selected
-  $("input:checkbox[name=toppings]").change(function() {
-    var toppingVal =$("input:checkbox[name=toppings]:checked").val();
+  // $("input:checkbox[name=toppings]").change(function() {
+  //   var toppingVal =$("input:checkbox[name=toppings]:checked").val();
+  //
+  //   if (toppingVal === "broccoli") {
+  //     $(".topping-images").append("<img src='img/broccoli.jpg'/>");
+  //     toppingVal = "";
+  //   } else if (toppingVal === "cheese") {
+  //     $(".topping-images").append("<img src='img/cheese.png'/>");
+  //     toppingVal = "";
+  //   } else if (toppingVal === "olives") {
+  //     $(".topping-images").append("<img src='img/olives.jpg'>");
+  //     toppingVal = "";
+  //   } else if (toppingVal === "pepperoni") {
+  //     $(".topping-images").append("<img src='img/pepperoni.jpg'>");
+  //     toppingVal = "";
+  //   } else if (toppingVal === "peppers") {
+  //     $(".topping-images").append("<img src='img/peppers.jpg'>");
+  //     toppingVal = "";
+  //   } else if (toppingVal === "sausage") {
+  //     $(".topping-images").append("<img src='img/sausage.jpg'>");
+  //     toppingVal = "";
+  //   } else if (toppingVal === "spinach") {
+  //     $(".topping-images").append("<img src='img/spinach.jpg'>");
+  //     toppingVal = "";
+  //   }
+  // })
 
-    if (toppingVal === "broccoli") {
-      $(".topping-images").append("<img src='img/broccoli.jpg'/>");
-    } else if (toppingVal === "cheese") {
-      $(".topping-images").append("<img src='img/cheese.png'/>");
-    } else if (toppingVal === "olives") {
-      $(".topping-images").append("<img src='img/olives.jpg'>");
-    } else if (toppingVal === "pepperoni") {
-      $(".topping-images").append("<img src='img/pepperoni.jpg'>");
-    } else if (toppingVal === "peppers") {
-      $(".topping-images").append("<img src='img/peppers.jpg'>");
-    } else if (toppingVal === "sausage") {
-      $(".topping-images").append("<img src='img/sausage.jpg'>");
-    } else if (toppingVal === "spinach") {
-      $(".topping-images").append("<img src='img/spinach.jpg'>");
-    }
-  })
 
 
 
