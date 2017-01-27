@@ -28,11 +28,12 @@ Pizza.prototype.sizePrice = function(size) {
 //Combines the price of the toppings and size with the base pizza price
 Pizza.prototype.totalPrice = function() {
   if (this.size) {
-    var price = 9 + this.toppingsPrice() + this.sizePrice() + ".00";
+    var price = "Total: $" + (9 + this.toppingsPrice() + this.sizePrice()) + ".00";
     return price;
   }
   else {
-    return alert("Please select a size");
+    alert("Please select a size")
+    return "";
   }
 }
 
@@ -135,6 +136,7 @@ $(document).ready(function () {
 
     //Shows the price output
     $(".total-price").removeClass("hidden")
+
     $("#total").text(pizzaOrder.totalPrice())
 
     // Calls the form reset function
