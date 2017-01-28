@@ -1,4 +1,4 @@
-//BACKEND LOGIC
+//BUSINESS LOGIC
 function Pizza(toppings, size) {
   this.toppings = [];
   this.size = size;
@@ -186,7 +186,6 @@ $(document).ready(function () {
 
     //Creates new Pizza object
     var pizzaOrder = new Pizza(toppingsPriceAmount, sizeSelected);
-
 
     var toppingsPriceAmount = pizzaOrder.toppingsPrice()
 
