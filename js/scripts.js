@@ -34,7 +34,7 @@ Pizza.prototype.totalPrice = function() {
     return price;
   }
   else {
-    alert("Please select a size")
+    alert("Please select a size");
     return "";
   }
 }
@@ -54,7 +54,7 @@ $(document).ready(function () {
   $("#pizza").addClass("hidden")
   $("input:radio[name=size]").change(function() {
     var sizeVal = $("input:radio[name=size]:checked").val();
-    $("#pizza").removeClass()
+    $("#pizza").removeClass();
     if (sizeVal === "small") {
       $("#pizza").css('display','block').addClass("small-image")
       $("#selected-size").text("Small");
@@ -69,25 +69,25 @@ $(document).ready(function () {
 
   //displays the corresponding image when a checkbox item is selected
   $("#broccoli").on("click", function() {
-    $("#broccoli-image").toggleClass("hidden")
+    $("#broccoli-image").toggleClass("hidden");
   })
   $("#cheese").on("click", function() {
-    $("#cheese-image").toggleClass("hidden")
+    $("#cheese-image").toggleClass("hidden");
   })
   $("#olives").on("click", function() {
-    $("#olives-image").toggleClass("hidden")
+    $("#olives-image").toggleClass("hidden");
   })
   $("#pepperoni").on("click", function() {
-    $("#pepperoni-image").toggleClass("hidden")
+    $("#pepperoni-image").toggleClass("hidden");
   })
   $("#peppers").on("click", function() {
-    $("#peppers-image").toggleClass("hidden")
+    $("#peppers-image").toggleClass("hidden");
   })
   $("#sausage").on("click", function() {
-    $("#sausage-image").toggleClass("hidden")
+    $("#sausage-image").toggleClass("hidden");
   })
   $("#spinach").on("click", function() {
-    $("#spinach-image").toggleClass("hidden")
+    $("#spinach-image").toggleClass("hidden");
   })
 
   // $("#another").click(function() {
@@ -185,7 +185,7 @@ $(document).ready(function () {
     //Creates new Pizza object
     var pizzaOrder = new Pizza(toppingsPriceAmount, sizeSelected);
 
-    var toppingsPriceAmount = pizzaOrder.toppingsPrice()
+    var toppingsPriceAmount = pizzaOrder.toppingsPrice();
 
     //Puts all of the checked topping items into an array
     $("input:checkbox[name=toppings]:checked").each(function(){
@@ -194,15 +194,15 @@ $(document).ready(function () {
     });
 
     //Shows the price output
-    $(".total-price").removeClass("hidden")
-    $("#total").text(pizzaOrder.totalPrice())
-    $("#toppings-list").text(pizzaOrder.toppings)
-    $("#size-list").text(pizzaOrder.size)
+    $(".total-price").removeClass("hidden");
+    $("#total").text(pizzaOrder.totalPrice());
+    $("#toppings-list").text(pizzaOrder.toppings);
+    $("#size-list").text(pizzaOrder.size);
 
     // Calls the form reset function and clears all of the images
     pizzaOrder.resetForm();
-    $(".topping-picture").addClass("hidden")
-    $("#pizza").addClass("hidden")
+    $(".topping-picture").addClass("hidden");
+    $("#pizza").addClass("hidden");
     $("#selected-size").text("");
   })
 })
