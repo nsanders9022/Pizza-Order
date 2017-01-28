@@ -90,9 +90,9 @@ $(document).ready(function () {
     $("#spinach-image").toggleClass("hidden")
   })
 
-  $("#another").click(function() {
-
-  })
+  // $("#another").click(function() {
+  //
+  // })
 
 
 
@@ -158,7 +158,6 @@ $(document).ready(function () {
 
 
 
-  //....................
 
 
   // $(".pizza-selection").each(function() {
@@ -173,7 +172,6 @@ $(document).ready(function () {
   // })
 
 
-  //........................
 
 
 
