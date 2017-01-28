@@ -57,7 +57,7 @@ _For questions or comments please call 333-222-9999._
 
 ### GitHub Pages link
 
-[Click here]() to access the GitHub Page
+[Click here](https://nsanders9022.github.io/Pizza-Order/) to access the GitHub Page
 
 ### License
 
